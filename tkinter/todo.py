@@ -26,20 +26,19 @@ def load_task():
             line = f.readline()
             tasks1.append(line)
             if not line: break
-            print(line)
         f.close
         del tasks1[-1:]
         
         tasks = tuple(tasks1)
         
     for task in tasks:
-        listbox_tasks.insert(tkinter.END, tasks)
+        listbox_tasks.insert(tkinter.END, task)
 
 def save_task():
     tasks = listbox_tasks.get(0, listbox_tasks.size())
     with open("task.txt", "w", encoding='utf-8') as f:
         for line in tasks:
-            f.write(line)
+            f.write(line+'\n')
 
 
 #create gui
