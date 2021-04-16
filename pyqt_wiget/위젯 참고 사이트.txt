@@ -1,0 +1,2 @@
+참고 사이트
+https://codetorial.net/pyqt5/widget/index.html
